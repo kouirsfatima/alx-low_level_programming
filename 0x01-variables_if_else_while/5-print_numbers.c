@@ -1,0 +1,20 @@
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ * main - Entry poiter
+ *
+ *Decription :  prints all single digit numbers of base 10 starting from 0
+ *
+ *Return: alwyas 0 (success)
+ */
+int main(void)
+{
+	char i;
+
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	putchar('\n');
+	return (0);
+}
