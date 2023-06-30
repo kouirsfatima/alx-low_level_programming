@@ -11,7 +11,8 @@ char *string_toupper(char *upp)
 
 	for (i = 0; upp[i] != '\0'; i++)
 	{
-		if (upp[i] >= 'a' && upp[i] <= 'z') {
+		if (upp[i] >= 'a' && upp[i] <= 'z')
+		{
 			upp[i] = upp[i] - 32;
 		}
 	}
