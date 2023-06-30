@@ -6,16 +6,16 @@
  */
 
 char *string_toupper(char *upp)
-
 {
-	int i = 0;
+	int i;
 
-	while (upp[i] != '\0')
+	for (i = 0; upp[i] != '\0'; i++)
 	{
-		if (upp[i] >= 'a' && upp[i] <= 'z')
-			*(upp + i) = *(upp + i) - 32;
-				i++;
+		if (upp[i] >= 'a' && upp[i] <= 'z') {
+			upp[i] = upp[i] - 32;
+		}
 	}
-
 	return (upp);
 }
+
+
