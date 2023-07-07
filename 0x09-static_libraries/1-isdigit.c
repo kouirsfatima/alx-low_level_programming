@@ -1,12 +1,13 @@
 #include "main.h"
 /**
- * _isdigit - checks if parameter is a number between 0 to 9.
- * @c:number
- * Return: Returns 1 if c is a digit else 0
+ * _isdigit - check for a digit (0 through 9).
+ *@c: var number
+ *Return: to 1 if c is digit, otherwise 0.
  */
 int _isdigit(int c)
 {
-	return (c >= 48 && c <= 57);
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }
-
-

@@ -1,13 +1,15 @@
+#include "main.h"
+
 /**
- *_abs- prints the sign of a number.
+ * _abs - absolute value of an integer.
  *
- * @n: integer number
+ *@a: var integer number.
+ *
  * Return: value
  */
-
-int _abs(int n)
+int _abs(int a)
 {
-	if (n < 0)
-		n = n * -1;
-	return (n);
+	if (a < 0)
+		a = a * -1;
+	return (a);
 }

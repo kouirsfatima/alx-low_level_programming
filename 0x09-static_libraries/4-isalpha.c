@@ -4,7 +4,7 @@
  *
  * @c: integer var
  *
- * Return: 1 if c is a letter, lowercase or  uppercase
+ * Return: to 1 if it is alpha, else 0.
  */
 int _isalpha(int c)
 {
