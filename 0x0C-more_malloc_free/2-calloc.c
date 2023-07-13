@@ -31,7 +31,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 		ptr[i] = nmemb;
 
-	ptr[size] = '\0';
+
 
 	return (ptr);
 }
