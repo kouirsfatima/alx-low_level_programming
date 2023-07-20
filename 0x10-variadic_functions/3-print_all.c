@@ -35,13 +35,12 @@ void print_all(const char * const format, ...)
 			if (str == NULL)
 				str = "(nil)";
 			printf("%s", str);
-
-			break;
-			default:
-			break;
 		}
-		if (format[i + 1])
+
+		if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i'
+					|| format[i] == 'f' || format[i] == 's'))
 			printf(", ");
+
 		i++;
 	}
 	printf("\n");
