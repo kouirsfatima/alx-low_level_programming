@@ -21,8 +21,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (s != NULL)
 		{
 			printf("%s", s);
-			if (i < n - 1 && separator != NULL)
-				printf("%s", separator);
+			if (i < n - 1)
+				if(separator != NULL)
+					printf("%s", separator);
 		}
 		else
 		{
@@ -30,8 +31,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("nil");
 
 
-			if (i < n - 1 && separator != NULL)
-				printf("%s", separator);
+			if (i < n - 1)
+				if(separator != NULL)
+					printf("%s", separator);
 		}
 	}
 
