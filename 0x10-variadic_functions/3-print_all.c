@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char c;
 	int integer;
-	float flt;
+	float f;
 	char *str;
 
 	va_start(args, format);
@@ -27,20 +27,19 @@ void print_all(const char * const format, ...)
 			printf("%d", integer);
 			break;
 			case 'f':
-			flt = va_arg(args, double);
-			printf("%f", flt);
+			f = va_arg(args, double);
+			printf("%f", f);
 			break;
 			case 's':
 			str = va_arg(args, char *);
 			if (str == NULL)
-				printf("(nil)");
-			switch
-				printf("%s", str);
+				str = "(nil)";
+			printf("%s", str);
+
 			break;
 			default:
 			break;
 		}
-
 		if (format[i + 1])
 			printf(", ");
 		i++;
