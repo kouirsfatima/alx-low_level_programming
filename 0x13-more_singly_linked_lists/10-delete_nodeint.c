@@ -25,13 +25,13 @@ if (head == NULL || *head == NULL)
 	}
 
 	prev = current;
-	for (i = 0; current != NULL && i < index; i++)
+	for (i = 0;   i < index; i++)
 	{
 		prev = current;
 		current = current->next;
 	}
 
-	if (current != NULL)
+	if (current == NULL)
 		return (-1);
 
 
