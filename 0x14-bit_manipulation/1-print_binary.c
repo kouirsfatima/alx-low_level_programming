@@ -9,22 +9,24 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i;
-	unsigned int j, k, a;
+	unsigned long int temp;
+	int shifts;
 
-	for (i = sizeof(n) * 8 - 1; i >= 0; i--)
+	if (n == 0)
 	{
-		j = i;
-		a = 1 << j;
-		k = n & a;
+		_putchar('0');
+		return;
+	}
 
-		if (k == 0)
-		{
-			_putchar('0');
-		}
-		else
-		{
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
+
+	for (; shifts >= 0; shifts--)
+	{
+		if ((n >> shifts) & 1)
 			_putchar('1');
-		}
+		else
+			_putchar('0');
 	}
 }
+
