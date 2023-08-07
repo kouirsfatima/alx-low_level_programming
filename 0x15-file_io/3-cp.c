@@ -8,17 +8,17 @@
  */
 int check_file(int fd_from, int fd_to, char *argv[])
 {
-        if (fd_from == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                exit(98);
-        }
-        if (fd_to == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-                exit(99);
-        }
-        return (0);
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	return (0);
 }
 /**
  * main - check the code for ALX students.
@@ -51,15 +51,14 @@ int main(int argc, char *argv[])
 		fb = read(fd_from, buf, 1024);
 		if (fb == -1)
 			check_file(-1, 0, argv);
-
 		nm = write(fd_to, buf, fb);
 		if (nm != fb)
-		check_file(0, -1, argv);
+			check_file(0, -1, argv);
 	}
 	free(buf);
 	if (close(fd_from) == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
 	if (close(fd_to) == -1)
