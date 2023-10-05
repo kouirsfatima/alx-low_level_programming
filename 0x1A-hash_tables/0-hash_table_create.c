@@ -17,7 +17,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (htp == NULL)
 		return (NULL);
 
-	htp->array = malloc(sizeof(hash_table_t *) * size);
+	htp->array = malloc(sizeof(hash_table_t) * size);
 	if (htp->array == NULL)
 		return (NULL);
 	return (htp);
