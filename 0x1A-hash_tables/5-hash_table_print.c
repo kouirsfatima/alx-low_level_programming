@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (seperat)
 					printf(", ");
-				printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+				printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
 				seperat = 1;
 			}
 			else
@@ -32,7 +32,7 @@ void hash_table_print(const hash_table_t *ht)
 				{
 					if (seperat)
 						printf(", ");
-					printf("'%s' : '%s'", tmp->key, tmp->value);
+					printf("'%s': '%s'", tmp->key, tmp->value);
 					seperat = 1;
 					tmp = tmp->next;
 				}
